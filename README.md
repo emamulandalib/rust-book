@@ -5,7 +5,7 @@ Currently, I am trying to learning `Rust` from basic to advance just by followin
 ---
 
 ## Installation
->As per the `Rust` book recommendation install `Rust` using below command
+As per the `Rust` book recommendation install `Rust` using below command
 
 `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 `
