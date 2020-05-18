@@ -10,11 +10,7 @@ impl Rectangle {
     }    
 
     fn can_hold(&self, rect: &Rectangle) -> bool {
-        if self.height > rect.height && self.width > rect.width {
-            return true
-        }
-
-        false
+        self.height > rect.height && self.width > rect.width
     }
 }
 
