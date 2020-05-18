@@ -4,6 +4,7 @@ struct Rectangle {
     height: u32
 }
 
+// methods
 impl Rectangle {
     fn area(&self) -> u32 {
         self.width * self.height
@@ -11,6 +12,16 @@ impl Rectangle {
 
     fn can_hold(&self, rect: &Rectangle) -> bool {
         self.height > rect.height && self.width > rect.width
+    }
+}
+
+// associated functions
+impl Rectangle {
+    fn square(size: u32) -> Rectangle {
+        Rectangle {
+            width: size,
+            height: size
+        }
     }
 }
 
@@ -33,8 +44,11 @@ fn main() {
         height: 45,
     };
 
+    let sqr = Rectangle::square(32);
+
     // println!("{:#?}", rect)
     println!("This area of the rectangle is {} square pixels.", rect.area());
     println!("Can rect1 hold rect2? {}", rect1.can_hold(&rect2));
     println!("Can rect1 hold rect3? {}", rect1.can_hold(&rect3));
+    println!("Can rect1 hold sqr? {}", rect1.can_hold(&sqr));
 }
